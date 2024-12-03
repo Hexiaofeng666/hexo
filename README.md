@@ -74,6 +74,39 @@ cat ~/.ssh/id_rsa.pub
 ``` bash
 ssh -T git@github.com
 ```
+## 一些额外功能
+
+### 更新看板娘
+blod文件夹底下：
+```bash
+npm install live2d-widget-model-koharu
+```
+其中live2d-widget-model-koharu是看板娘的模板，可以根据自己的喜好替换。网上查找live2d-widget-model模板下载即可
+
+预览网址：https://www.cnblogs.com/friends-a/p/11054968.html#live2dwidgetmodelchitose_12
+
+然后在 _config.yml 中配置：
+```yaml
+live2d:
+  enable: true
+  pluginModelPath: assets/
+  model:
+    #模板目录，在node_modules里
+    use: live2d-widget-model-koharu
+  display:
+    position: right
+    width: 300
+    height: 600
+  mobile:
+    # 在手机端显示
+    show: false
+  rect: opacity:0.7
+```
+
+
+
+
+
 
 ## 常用命令总结
 |  命令  | 描述  |
